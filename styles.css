@@ -14,7 +14,7 @@ body {
 }
 
 header {
-    background-color: white; /* изменение цвета фона на белый */
+    background-color: white; 
     padding: 20px;
     text-align: left;
 }
@@ -24,7 +24,7 @@ nav a {
     text-decoration: none;
     font-size: 14px;
     color: #333;
-    font-weight: bold; /* сделать текст жирным */
+    font-weight: bold; 
     margin-left: 0;
 }
 
@@ -50,11 +50,11 @@ h2 {
 }
 
 #about {
-    margin-top: 0px; /* задает отступ перед секцией "О нас" */
+    margin-top: 0px; 
 }
 
 img {
-    width: 40%; /* уменьшение размера изображения на полтора раза */
+    width: 40%; 
     height: auto;
     margin-bottom: 10px;
 }
@@ -64,22 +64,22 @@ p {
 }
 
 ul {
-    list-style-type: disc; /* добавление точек в список */
-    margin-left: 20px; /* отступ слева для списка */
+    list-style-type: disc; 
+    margin-left: 20px; 
 }
 
 table {
-    width: 50%; /* уменьшение ширины таблицы */
+    width: 50%; 
     border-collapse: collapse;
-    border: 1px solid black; /* черный контур таблицы */
-    text-align: left; /* выравнивание таблицы по левому краю */
-    margin-left: 0; /* убрать отступ слева */
+    border: 1px solid black; 
+    text-align: left; 
+    margin-left: 0; 
 }
 
 table, th, td {
     border: 1px solid black;
     padding: 8px;
-    text-align: center; /* выравнивание данных по центру */
+    text-align: center; 
 }
 
 footer {
@@ -87,7 +87,7 @@ footer {
     color: white;
     text-align: left;
     padding: 30px;
-    width: 100%; /* полоса черного цвета на всю ширину страницы */
+    width: 100%; 
     position: absolute;
     left: 0;
     right: 0;
