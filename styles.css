@@ -29,7 +29,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #007BFF;
+    color: orange;
 }
 
 main {
@@ -86,7 +86,7 @@ footer {
     background-color: black;
     color: white;
     text-align: left;
-    padding: 10px;
+    padding: 30px;
     width: 100%; /* полоса черного цвета на всю ширину страницы */
     position: absolute;
     left: 0;
