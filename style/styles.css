@@ -6,10 +6,10 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     color: #333;
     text-align: center;
-    margin-left: 30px;
+    margin-left: 10px;
 }
 
 header {
@@ -53,9 +53,7 @@ h2 {
 }
 
 img {
-    margin: 10px auto 20px;
-    display: block;
-    width: 40%;
+    width: 55%;
     height: auto;
     margin-bottom: 10px;
 }

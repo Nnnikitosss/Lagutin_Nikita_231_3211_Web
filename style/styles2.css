@@ -1,0 +1,155 @@
+/* Основные стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    overflow-x: hidden; /* Убираем горизонтальную прокрутку */
+}
+
+header {
+    background-color: white;
+    color: #333;
+    padding: 10px 20px; /* Уменьшаем отступы для заголовка */
+    text-align: left;
+}
+
+h1 {
+    margin-top: 0; /* Убираем отступ сверху у заголовка */
+}
+
+nav a {
+    color: #333; /* Основной цвет ссылок */
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 1.5; /* Убираем отступы для ссылок */
+}
+
+nav a:first-child {
+    margin-left: 0; /* Убираем отступ слева у первой ссылки */
+}
+
+nav a:hover {
+    color: orange; /* Цвет ссылок при наведении */
+}
+
+#active {
+    color: tomato;
+}
+
+main {
+    padding: 10px 20px; /* Уменьшаем отступы для основного контента */
+    margin-top: 0; /* Убираем отступ сверху */
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.dishes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.dish {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 35px;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    cursor: pointer;
+    text-align: left;
+}
+
+.dish:hover {
+    border: 2px solid tomato;
+}
+
+.dish img {
+    width: 100%;
+    border-radius: 35px;
+}
+
+.dish-info {
+    margin-bottom: 10px;
+}
+
+.dish .price {
+    font-size: 20px;
+    color: black;
+    margin-bottom: 5px; /* Добавляем отступ между ценой и названием */
+}
+
+.dish .name {
+    font-size: 18px;
+    color: black;
+    margin-top: 0; /* Убираем отступ между ценой и названием */
+}
+
+.dish .weight {
+    color: gray;
+    font-size: 14px;
+    margin-top: 15px; /* Увеличиваем отступ между названием и весом */
+}
+
+.dish button {
+    background-color: white;
+    padding: 15px 40px; /* Увеличиваем размер кнопки */
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    font-size: 18px; /* Увеличиваем размер шрифта на кнопке */
+}
+
+.dish button:hover {
+    background-color: white; /* Оставляем кнопку белой при наведении */
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: left;
+    padding: 30px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: tomato;
+}
+
+/* Адаптивные стили */
+@media (max-width: 800px) {
+    .dishes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    h2 {
+        text-align: center;
+    }
+    .dishes {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 400px) {
+    /* Стили для главной страницы */
+}
+
+/* Заглушки для ссылок */
+.placeholder {
+    color: gray;
+    pointer-events: none; /* Отключаем кликабельность */
+}
