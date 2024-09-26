@@ -1,37 +1,37 @@
-/* Основные стили */
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: white;
-    overflow-x: hidden; /* Убираем горизонтальную прокрутку */
+    overflow-x: hidden;
 }
 
 header {
     background-color: white;
     color: #333;
-    padding: 10px 20px; /* Уменьшаем отступы для заголовка */
+    padding: 10px 20px;
     text-align: left;
 }
 
 h1 {
-    margin-top: 0; /* Убираем отступ сверху у заголовка */
+    margin-top: 0; 
 }
 
 nav a {
-    color: #333; /* Основной цвет ссылок */
+    color: #333; 
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
-    line-height: 1.5; /* Убираем отступы для ссылок */
+    line-height: 1.5; 
 }
 
 nav a:first-child {
-    margin-left: 0; /* Убираем отступ слева у первой ссылки */
+    margin-left: 0; 
 }
 
 nav a:hover {
-    color: orange; /* Цвет ссылок при наведении */
+    color: orange; 
 }
 
 #active {
@@ -39,8 +39,8 @@ nav a:hover {
 }
 
 main {
-    padding: 10px 20px; /* Уменьшаем отступы для основного контента */
-    margin-top: 0; /* Убираем отступ сверху */
+    padding: 10px 20px; 
+    margin-top: 0; 
 }
 
 h2 {
@@ -79,33 +79,33 @@ h2 {
 .dish .price {
     font-size: 20px;
     color: black;
-    margin-bottom: 5px; /* Добавляем отступ между ценой и названием */
+    margin-bottom: 5px; 
 }
 
 .dish .name {
     font-size: 18px;
     color: black;
-    margin-top: 0; /* Убираем отступ между ценой и названием */
+    margin-top: 0; 
 }
 
 .dish .weight {
     color: gray;
     font-size: 14px;
-    margin-top: 15px; /* Увеличиваем отступ между названием и весом */
+    margin-top: 15px; 
 }
 
 .dish button {
     background-color: white;
-    padding: 15px 40px; /* Увеличиваем размер кнопки */
+    padding: 15px 40px; 
     border-radius: 10px;
     cursor: pointer;
     border: none;
     width: 100%;
-    font-size: 18px; /* Увеличиваем размер шрифта на кнопке */
+    font-size: 18px;
 }
 
 .dish button:hover {
-    background-color: white; /* Оставляем кнопку белой при наведении */
+    background-color: white;
 }
 
 footer {
@@ -145,11 +145,11 @@ footer a:hover {
 }
 
 @media (max-width: 400px) {
-    /* Стили для главной страницы */
+    
 }
 
-/* Заглушки для ссылок */
+
 .placeholder {
     color: gray;
-    pointer-events: none; /* Отключаем кликабельность */
+    pointer-events: none;
 }
