@@ -76,10 +76,6 @@ h2 {
     border: 2px solid tomato;
 }
 
-.dish:hover button {
-    background-color: tomato;
-    color: white; 
-}
 
 /* section>div>div>img */
 .dish img {
@@ -114,15 +110,22 @@ h2 {
 
 /* section>div>div>button */
 .dish button {
-    background-color: #f1eee9;
+    background-color: transparent; 
+    color: black; 
     padding: 10px 30px; 
     border-radius: 10px;
     margin-top: 10px;
     cursor: pointer;
-    border: none;
+    border: none; 
     width: 100%;
     font-size: 18px;
 }
+
+.dish:hover button {
+    background-color: tomato; 
+    color: white; 
+}
+
 
 
 footer {
