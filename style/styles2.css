@@ -18,6 +18,11 @@ h1 {
     margin-top: 0; 
 }
 
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
 nav a {
     color: #333; 
     margin: 0 15px;
@@ -48,13 +53,17 @@ h2 {
     margin-bottom: 10px;
 }
 
-.dishes {
+/* section>div */
+.dishes {     
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 
+/* section>div>div */
 .dish {
+    display: flex;
+    flex-direction: column;
     background-color: white;
     padding: 30px 40px;
     border-radius: 35px;
@@ -67,6 +76,7 @@ h2 {
     border: 2px solid tomato;
 }
 
+/* section>div>div>img */
 .dish img {
     width: 100%;
     border-radius: 35px;
@@ -76,28 +86,33 @@ h2 {
     margin-bottom: 10px;
 }
 
+/* section>div>div>p цена */
 .dish .price {
     font-size: 20px;
     color: black;
     margin-bottom: 5px; 
 }
 
+/* section>div>div>p название */
 .dish .name {
     font-size: 18px;
     color: black;
     margin-top: 0; 
 }
 
+/* section>div>div>p вес */
 .dish .weight {
     color: gray;
     font-size: 14px;
     margin-top: 15px; 
 }
 
+/* section>div>div>button */
 .dish button {
-    background-color: white;
-    padding: 15px 40px; 
+    background-color: #f1eee9;
+    padding: 10px 30px; 
     border-radius: 10px;
+    margin-top: 10px;
     cursor: pointer;
     border: none;
     width: 100%;
@@ -128,7 +143,7 @@ footer a:hover {
     color: tomato;
 }
 
-/* Адаптивные стили */
+
 @media (max-width: 800px) {
     .dishes {
         grid-template-columns: repeat(2, 1fr);
