@@ -101,3 +101,7 @@ footer a {
 footer a:hover {
     color: orange;
 }
+
+a.active {
+    color: tomato;
+}
