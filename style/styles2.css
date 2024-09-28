@@ -173,3 +173,98 @@ footer a:hover {
     color: gray;
     pointer-events: none;
 }
+
+#order-form {
+    padding: 20px;
+    background-color: white;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+#order-form h2 {
+    margin-top: 0;
+}
+
+#order-form form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#order-form form div {
+    width: 45%;
+    margin: 0 auto;
+}
+
+#order-form h3 {
+    text-align: left;
+}
+
+#order-form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+#order-form select,
+#order-form input,
+#order-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 0;
+}
+
+#order-form textarea {
+    width: 93%; 
+    height: 100px;
+    margin-left: 0; 
+}
+
+#order-form button {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 0;
+    margin-top: 10px;
+}
+
+#order-form button[type="reset"] {
+    margin-right: 10px;
+}
+
+.note {
+    font-size: 12px;
+    color: gray;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.checkbox-label,
+.radio-label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.checkbox-label input,
+.radio-label input {
+    margin-right: 10px;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-start; 
+    width: 100%;
+}
