@@ -211,9 +211,8 @@ footer a:hover {
     flex-wrap: wrap;
 }
 
-#order-form form div {
-    width: 45%;
-    margin: 0 auto;
+#order-form form div:not(.radio-group) {
+    width: 45%; 
 }
 
 #order-form h3 {
@@ -222,12 +221,11 @@ footer a:hover {
 
 #order-form label {
     display: block;
-    margin-bottom: 5px;
     text-align: left;
 }
 
 #order-form select,
-#order-form input,
+#order-form input:not([type="checkbox"]):not([type="radio"]),
 #order-form textarea {
     width: 100%;
     padding: 10px;
@@ -246,7 +244,7 @@ footer a:hover {
 }
 
 @media (max-width: 800px) {
-    #order-form form div {
+    #order-form form div:not(.radio-group) {
         width: 45%;
     }
 
@@ -260,7 +258,7 @@ footer a:hover {
     background-color: white;
     color: black;
     border: 1px solid black;
-    padding: 10px 20px;
+    padding: 10px 40px;
     cursor: pointer;
     border-radius: 0;
     margin-top: 10px;
@@ -275,12 +273,13 @@ footer a:hover {
     color: gray;
     text-align: left;
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 20px; 
+    font-style: italic; 
 }
 
 .checkbox-label,
 .radio-label {
-    display: flex;
+    display: flex; 
     align-items: center;
     justify-content: flex-start;
     margin-bottom: 10px;
@@ -295,10 +294,20 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%; 
 }
 
 .button-group {
     display: flex;
     justify-content: flex-start; 
     width: 100%;
-} 
+}
+
+.checkbox-label {
+    margin-bottom: 20px; 
+}
+
+
+.time {
+    margin-bottom: 10px;
+}
