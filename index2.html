@@ -18,217 +18,88 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section id="soup-section">
             <h2>Выберите суп</h2>
-            <div class="dishes">
-                <div class="dish">
-                    <img src="picture/1.webp" alt="Суп">
-                    <div class="dish-info">
-                        <p class="price">800₽</p>
-                        <p class="name">Солянка</p>
-                        <p class="weight">350 г</p> 
-                        <button>Добавить</button>
-                    </div>
-                </div>
-                <div class="dish">
-                    <img src="picture/2.webp" alt="Суп">
-                    <div class="dish-info">
-                        <p class="price">650₽</p>
-                        <p class="name">Борщ</p>
-                        <p class="weight">400 г</p>
-                        <button>Добавить</button>
-                    </div>
-                </div>
-                <div class="dish">
-                    <img src="picture/3.webp" alt="Суп">
-                    <div class="dish-info">
-                        <p class="price">600₽</p>
-                        <p class="name">Томаный суп</p>
-                        <p class="weight">300 г</p>
-                        <button>Добавить</button>
-                    </div>
-                </div>
-                <div class="dish">
-                    <img src="picture/4.webp" alt="Суп">
-                    <div class="dish-info">
-                        <p class="price">700₽</p>
-                        <p class="name">Чечевичный суп</p>
-                        <p class="weight">350 г</p>
-                        <button>Добавить</button>
-
-                    </div>
-                </div>
-            </div>
+            <div class="dishes"></div>
         </section>
-        <section>
+        <section id="main-section">
             <h2>Выберите главное блюдо</h2>
-            <div class="dishes">
-                <div class="dish">
-                    <img src="picture/5.webp" alt="Главное блюдо">
-                    <div class="dish-info">
-                        <p class="price">500₽</p>
-                        <p class="name">Удон с овощами</p>
-                        <p class="weight">300 г</p>
-                        <button>Добавить</button>
-                    </div>
-                </div>
-                <div class="dish">
-                    <img src="picture/6.webp" alt="Главное блюдо">
-                    <div class="dish-info">
-                        <p class="price">1 200₽</p>
-                        <p class="name">Говяжий стейк</p>
-                        <p class="weight">250 г</p>
-                        <button>Добавить</button>
-                    </div>
-                </div>
-                <div class="dish">
-                    <img src="picture/7.webp" alt="Главное блюдо">
-                    <div class="dish-info">
-                        <p class="price">750₽</p>
-                        <p class="name">Мясо с овощами</p>
-                        <p class="weight">350 г</p>
-                        <button>Добавить</button>
-                    </div>
-                </div>
-                <div class="dish">
-                    <img src="picture/8.webp" alt="Главное блюдо">
-                    <div class="dish-info">
-                        <p class="price">600₽</p>
-                        <p class="name">Пельмени</p>
-                        <p class="weight">300 г</p>
-                        <button>Добавить</button>
-                    </div>
-                </div>
-            </div>
+            <div class="dishes"></div>
         </section>
-        <section>
+        <section id="drink-section">
             <h2>Выберите напиток</h2>
-            <div class="dishes">
-                <div class="dish">
-                    <img src="picture/9.webp" alt="Напиток">
-                    <div class="dish-info">
-                        <p class="price">200₽</p>
-                        <p class="name">Холодный чай</p>
-                        <p class="weight">300 мл</p>
-                        <button>Добавить</button>
+            <div class="dishes"></div>
+        </section>
+        <section id="order-form">
+            <h2>Сделать заказ</h2>
+            <form action="https://httpbin.org/post" method="POST">
+                <div class="order-section">
+                    <h3>Ваш заказ</h3>
+                    <div class="order-item">
+                        <p><strong>Суп</strong></p>
+                        <p id="selected-soup">Не выбран</p>
+                    </div>
+                    <div class="order-item">
+                        <p><strong>Главное блюдо</strong></p>
+                        <p id="selected-main-dish">Не выбрано</p>
+                    </div>
+                    <div class="order-item">
+                        <p><strong>Напиток</strong></p>
+                        <p id="selected-drink">Не выбран</p>
+                    </div>
+                    <div class="order-item">
+                        <p id="total-price">Стоимость заказа<span class="price-value">0₽</span></p>
+                    </div>                    
+                    <label for="comments">Комментарии к заказу</label>
+                    <textarea id="comments" name="comments"></textarea>
+                </div>
+        
+                <div class="customer-section">
+                    <h3>Ваши данные</h3>
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" name="name" required>
+        
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="subscribe" checked>
+                        Получать информацию о скидках и акциях
+                    </label>
+        
+                    <label for="phone">Номер телефона</label>
+                    <input type="tel" id="phone" name="phone" required>
+        
+                    <label for="address">Адрес доставки</label>
+                    <input type="text" id="address" name="address" required>
+                    <p class="note">Доставка осуществляется только по Москве</p>
+                    
+                    <label class="time">Время доставки</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="delivery-time" value="asap" required> Как можно скорее
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="delivery-time" value="specific" required> К указанному времени
+                        </label>
+                    </div>
+        
+                    <label for="delivery-time-specific">Укажите время доставки</label>
+                    <input type="time" id="delivery-time-specific" name="delivery-time-specific" min="07:00" max="23:00" step="300">
+                    <p class="note">Доступное время доставки с 7:00 до 23:00</p>
+        
+                    <div class="button-group">
+                        <button type="reset">Сбросить</button>
+                        <button type="submit">Отправить</button>
                     </div>
                 </div>
-                <div class="dish">
-                    <img src="picture/10.webp" alt="Напиток">
-                    <div class="dish-info">
-                        <p class="price">250₽</p>
-                        <p class="name">Апельсиновый сок</p>
-                        <p class="weight">300 мл</p>
-                        <button>Добавить</button>
-                    </div>
-                </div>
-                <div class="dish">
-                    <img src="picture/11.webp" alt="Напиток">
-                    <div class="dish-info">
-                        <p class="price">350₽</p>
-                        <p class="name">Мохито</p>
-                        <p class="weight">300 мл</p>
-                        <button>Добавить</button>
-                    </div>
-                </div>
-                <div class="dish">
-                    <img src="picture/12.webp" alt="Напиток">
-                    <div class="dish-info">
-                        <p class="price">150₽</p>
-                        <p class="name">Coca-Cola</p>
-                        <p class="weight">330 мл</p>
-                        <button>Добавить</button>
-                    </div>
-                </div>
-            </div>
+            </form>
         </section>
     </main>
-
-    
-    <section id="order-form">
-        <h2>Сделать заказ</h2>
-        <form action="https://httpbin.org/post" method="POST">
-            <div class="order-section">
-                <h3>Ваш заказ</h3>
-                <label for="soup">Суп</label>
-                <select id="soup" name="soup" required>
-                    <option value="">-- Выберите суп --</option>
-                    <option value="solyanka">Солянка</option>
-                    <option value="borsch">Борщ</option>
-                    <option value="tomato">Томатный суп</option>
-                    <option value="lentil">Чечевичный суп</option>
-                </select>
-    
-                <label for="main-dish">Главное блюдо</label>
-                <select id="main-dish" name="main-dish" required>
-                    <option value="">-- Выберите главное блюдо --</option>
-                    <option value="udon">Удон с овощами</option>
-                    <option value="steak">Говяжий стейк</option>
-                    <option value="meat-vegetables">Мясо с овощами</option>
-                    <option value="dumplings">Пельмени</option>
-                </select>
-    
-                <label for="drink">Напиток</label>
-                <select id="drink" name="drink" required>
-                    <option value="">-- Выберите напиток --</option>
-                    <option value="iced-tea">Холодный чай</option>
-                    <option value="orange-juice">Апельсиновый сок</option>
-                    <option value="mojito">Мохито</option>
-                    <option value="coca-cola">Coca-Cola</option>
-                </select>
-    
-                <label for="comments">Комментарии к заказу</label>
-                <textarea id="comments" name="comments"></textarea>
-            </div>
-    
-            <div class="customer-section">
-                <h3>Ваши данные</h3>
-                <label for="name">Имя</label>
-                <input type="text" id="name" name="name" required>
-    
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-    
-                <label class="checkbox-label">
-                    <input type="checkbox" name="subscribe" checked>
-                    Получать информацию о скидках и акциях
-                </label>
-    
-                <label for="phone">Номер телефона</label>
-                <input type="tel" id="phone" name="phone" required>
-    
-                <label for="address">Адрес доставки</label>
-                <input type="text" id="address" name="address" required>
-                <p class="note">Доставка осуществляется только по Москве</p>
-                
-                <label class="time">Время доставки:</label>
-                <div class="radio-group">
-                    <label class="radio-label">
-                        <input type="radio" name="delivery-time" value="asap" required> Как можно скорее
-                    </label>
-                    <label class="radio-label">
-                        <input type="radio" name="delivery-time" value="specific" required> К указанному времени
-                        </label>
-                </div>
-
-                
-                <label for="delivery-time-specific">Укажите время доставки</label>
-                <input type="time" id="delivery-time-specific" name="delivery-time-specific" min="07:00" max="23:00" step="300">
-                <p class="note">Доступное время доставки с 7:00 до 23:00</p>
-
-                <div class="button-group">
-                    <button type="reset">Сбросить</button>
-                    <button type="submit">Отправить</button>
-                </div>
-            </div>
-        </form>
-    </section>
-    
-    
-    
-    
     <footer>
         <p>Позвонить нам: <a href="tel:+70000000000">+7-000-000-00-00</a></p>
     </footer>
+    <script src="Java/dishes.js"></script>
+    <script src="Java/displayDishes.js"></script>
 </body>
 </html>

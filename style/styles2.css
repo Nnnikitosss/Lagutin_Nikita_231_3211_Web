@@ -53,14 +53,13 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* section>div */
+
 .dishes {     
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 
-/* section>div>div */
 .dish {
     display: flex;
     flex-direction: column;
@@ -77,7 +76,6 @@ h2 {
 }
 
 
-/* section>div>div>img */
 .dish img {
     width: 100%;
     border-radius: 35px;
@@ -87,28 +85,24 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* section>div>div>p цена */
 .dish .price {
     font-size: 20px;
     color: black;
     margin-bottom: 5px; 
 }
 
-/* section>div>div>p название */
 .dish .name {
     font-size: 18px;
     color: black;
     margin-top: 0; 
 }
 
-/* section>div>div>p вес */
 .dish .weight {
     color: gray;
     font-size: 14px;
     margin-top: 15px; 
 }
 
-/* section>div>div>button */
 .dish button {
     background-color: transparent; 
     color: black; 
@@ -201,6 +195,10 @@ footer a:hover {
     text-align: center;
 }
 
+#order-form .order-item {
+    text-align: left; /* Добавлено для выравнивания order-item по левому краю */
+}
+
 #order-form h2 {
     margin-top: 0;
 }
@@ -244,7 +242,7 @@ footer a:hover {
 }
 
 @media (max-width: 800px) {
-    #order-form form div:not(.radio-group) {
+    #order-form form div:not(.radio-group):not(.order-item) {
         width: 45%;
     }
 
@@ -253,6 +251,7 @@ footer a:hover {
         max-width: 100%;
     }
 }
+
 
 #order-form button {
     background-color: white;
@@ -311,3 +310,28 @@ footer a:hover {
 .time {
     margin-bottom: 10px;
 }
+
+
+#total-price {
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#total-price .price-value {
+    font-size: 20px; /* Увеличенный размер шрифта для стоимости в рублях */
+    display: inline-block;
+
+}
+
+.order-item p {
+    margin: 0; /* Убираем отступы */
+    line-height: 1.2; /* Уменьшаем межстрочный интервал */
+}
+
+.order-item p + p {
+    margin-bottom: 20px; /* Добавляем небольшой отступ сверху для текста "Не выбран" */
+    width: 300px;
+}
+
