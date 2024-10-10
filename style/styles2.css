@@ -163,25 +163,6 @@ footer a:hover {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .placeholder {
     color: gray;
     pointer-events: none;
@@ -196,7 +177,7 @@ footer a:hover {
 }
 
 #order-form .order-item {
-    text-align: left; /* Добавлено для выравнивания order-item по левому краю */
+    text-align: left;
 }
 
 #order-form h2 {
@@ -320,18 +301,34 @@ footer a:hover {
 }
 
 #total-price .price-value {
-    font-size: 20px; /* Увеличенный размер шрифта для стоимости в рублях */
+    font-size: 20px; 
     display: inline-block;
 
 }
 
 .order-item p {
-    margin: 0; /* Убираем отступы */
-    line-height: 1.2; /* Уменьшаем межстрочный интервал */
+    margin: 0; 
+    line-height: 1.2; 
 }
 
 .order-item p + p {
-    margin-bottom: 20px; /* Добавляем небольшой отступ сверху для текста "Не выбран" */
+    margin-bottom: 20px; 
     width: 300px;
 }
 
+
+
+
+#no-selection-message {
+    display: none; 
+}
+
+
+#no-selection-message {
+    display: block; 
+    margin-bottom: 20px;
+}
+
+#soup-order, #main-order, #drink-order, #total-price-block {
+    display: none; 
+}

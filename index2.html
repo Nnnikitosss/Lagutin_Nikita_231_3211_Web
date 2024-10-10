@@ -35,24 +35,28 @@
             <form action="https://httpbin.org/post" method="POST">
                 <div class="order-section">
                     <h3>Ваш заказ</h3>
-                    <div class="order-item">
+                    <div id="no-selection-message" class="order-item">
+                        <p>Ничего не выбрано</p>
+                    </div>
+                    <div class="order-item" id="soup-order" style="display: none;">
                         <p><strong>Суп</strong></p>
                         <p id="selected-soup">Не выбран</p>
                     </div>
-                    <div class="order-item">
+                    <div class="order-item" id="main-order" style="display: none;">
                         <p><strong>Главное блюдо</strong></p>
                         <p id="selected-main-dish">Не выбрано</p>
                     </div>
-                    <div class="order-item">
+                    <div class="order-item" id="drink-order" style="display: none;">
                         <p><strong>Напиток</strong></p>
                         <p id="selected-drink">Не выбран</p>
                     </div>
-                    <div class="order-item">
+                    <div class="order-item" id="total-price-block" style="display: none;">
                         <p id="total-price">Стоимость заказа<span class="price-value">0₽</span></p>
                     </div>                    
                     <label for="comments">Комментарии к заказу</label>
                     <textarea id="comments" name="comments"></textarea>
                 </div>
+        
         
                 <div class="customer-section">
                     <h3>Ваши данные</h3>
