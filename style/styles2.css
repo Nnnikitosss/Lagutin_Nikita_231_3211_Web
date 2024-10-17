@@ -18,21 +18,13 @@ h1 {
     margin-top: 0; 
 }
 
-nav {
-    display: flex;
-    justify-content: flex-start;
-}
-
+/* Шапка*/
 nav a {
     color: #333; 
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
     line-height: 1.5; 
-}
-
-nav a:first-child {
-    margin-left: 0; 
 }
 
 nav a:hover {
@@ -54,73 +46,77 @@ h2 {
 }
 
 
-.dishes {     
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
-
+/* Блок отвечающий за карточки продуктов */
 .dish {
     display: flex;
     flex-direction: column;
     background-color: white;
-    padding: 30px 40px;
-    border-radius: 35px;
-    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    padding: 20px 30px;
+    border-radius: 25px;
+    filter: drop-shadow(12px 14px 18px rgba(0, 0, 0, 0.12));
     cursor: pointer;
     text-align: left;
+    width: 400px; 
+    margin: 10px;
 }
-
-.dish:hover {
-    border: 2px solid tomato;
-}
-
 
 .dish img {
-    width: 100%;
-    border-radius: 35px;
+    max-width: 95%; 
+    border-radius: 25px; 
 }
 
 .dish-info {
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .dish .price {
-    font-size: 20px;
+    font-size: 18px;
     color: black;
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
 }
 
 .dish .name {
-    font-size: 18px;
+    font-size: 16px;
     color: black;
-    margin-top: 0; 
+    margin-top: 0;
 }
 
 .dish .weight {
     color: gray;
     font-size: 14px;
-    margin-top: 15px; 
+    margin-top: 5px;
 }
 
 .dish button {
-    background-color: transparent; 
-    color: black; 
-    padding: 10px 30px; 
+    background-color: transparent;
+    color: black;
+    padding: 10px 20px;
     border-radius: 10px;
-    margin-top: 10px;
+    margin-top: 5px;
     cursor: pointer;
-    border: none; 
+    border: none;
     width: 100%;
-    font-size: 18px;
+    font-size: 16px;
+}
+
+.dish:hover {
+    border: 2px solid tomato; 
 }
 
 .dish:hover button {
-    background-color: tomato; 
-    color: white; 
+    background-color: tomato;
+    color: white;
+}
+
+.dishes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    justify-items: center; 
 }
 
 
+/* Конец блока карточек */
 
 footer {
     background-color: black;
@@ -140,26 +136,6 @@ footer a {
 
 footer a:hover {
     color: tomato;
-}
-
-
-@media (max-width: 800px) {
-    .dishes {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    h2 {
-        text-align: center;
-    }
-    .dishes {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 400px) {
-    
 }
 
 
@@ -222,16 +198,6 @@ footer a:hover {
     margin: 0 auto;
 }
 
-@media (max-width: 800px) {
-    #order-form form div:not(.radio-group):not(.order-item) {
-        width: 45%;
-    }
-
-    #order-form textarea {
-        width: 100%;
-        max-width: 100%;
-    }
-}
 
 
 #order-form button {
@@ -332,3 +298,28 @@ footer a:hover {
 #soup-order, #main-order, #drink-order, #total-price-block {
     display: none; 
 }
+
+
+/* Стили кнопок фильтрации */
+.filters button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: green; 
+    background: none;
+    border: none; 
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
+}
+/* Раскодировать для того чтобы появлялась обводка при наведении на кнопку */
+/* .filters button:hover {
+    border: 2px solid green;  
+} */
+
+.filters button.active {
+    background-color: #d2eedc; 
+    color: green; 
+    border-radius: 10px; 
+}
+/* Конец кнопок фильтрации */
