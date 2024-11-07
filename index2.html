@@ -62,6 +62,102 @@
             </div>
             <div class="dishes"></div>
         </section>
+<!-- .................................................................................. -->
+
+        <!-- Новая секция с доступными комбо -->
+        <section id="combo-options">
+            <h2>Доступные для заказа комбо</h2>
+            <div class="combo-grid">
+                <div class="combo-column">
+                    <div class="combo-row">
+                        <div class="combo-item">
+                            <img src="picture/soup.jpg" alt="Суп">
+                            <p>Суп</p>
+                        </div>
+                        <div class="combo-item">
+                            <img src="picture/main.jpg" alt="Главное блюдо">
+                            <p>Главное блюдо</p>
+                        </div>
+                        <div class="combo-item">
+                            <img src="picture/salat.jpg" alt="Салат">
+                            <p>Салат</p>
+                        </div>
+                        <div class="combo-item">
+                            <img src="picture/drink.jpg" alt="Напиток">
+                            <p>Напиток</p>
+                        </div>
+                    </div>
+                    <div class="combo-row">
+                        <div class="combo-item">
+                            <img src="picture/main.jpg" alt="Главное блюдо">
+                            <p>Главное блюдо</p>
+                        </div>
+                        <div class="combo-item">
+                            <img src="picture/salat.jpg" alt="Салат">
+                            <p>Салат</p>
+                        </div>
+                        <div class="combo-item">
+                            <img src="picture/drink.jpg" alt="Напиток">
+                            <p>Напиток</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="combo-column">
+                    <div class="combo-row">
+                        <div class="combo-item">
+                            <img src="picture/soup.jpg" alt="Суп">
+                            <p>Суп</p>
+                        </div>
+                        <div class="combo-item">
+                            <img src="picture/main.jpg" alt="Главное блюдо">
+                            <p>Главное блюдо</p>
+                        </div>
+                        <div class="combo-item">
+                            <img src="picture/drink.jpg" alt="Напиток">
+                            <p>Напиток</p>
+                        </div>
+                    </div>
+                    <div class="combo-row">
+                        <div class="combo-item">
+                            <img src="picture/main.jpg" alt="Главное блюдо">
+                            <p>Главное блюдо</p>
+                        </div>
+                        <div class="combo-item">
+                            <img src="picture/drink.jpg" alt="Напиток">
+                            <p>Напиток</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="combo-column">
+                    <div class="combo-row">
+                        <div class="combo-item">
+                            <img src="picture/soup.jpg" alt="Суп">
+                            <p>Суп</p>
+                        </div>
+                        <div class="combo-item">
+                            <img src="picture/salat.jpg" alt="Салат">
+                            <p>Салат</p>
+                        </div>
+                        <div class="combo-item">
+                            <img src="picture/drink.jpg" alt="Напиток">
+                            <p>Напиток</p>
+                        </div>
+                    </div>
+                    <div class="combo-row">
+                        <div class="combo-item">
+                            <img src="picture/desert.jpg" alt="Десерт">
+                            <p>Десерт</p>
+                            <p class="small-note">(Можно добавить к любому заказу)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        
+<!-- ................................................................................... -->
         <section id="order-form">
             <h2>Сделать заказ</h2>
             <form action="https://httpbin.org/post" method="POST">
@@ -97,34 +193,34 @@
                     <textarea id="comments" name="comments"></textarea>
                 </div>
         
-        
+        <!-- Удалил required для того что бы не просил заполнить все поля -->
                 <div class="customer-section">
                     <h3>Ваши данные</h3>
                     <label for="name">Имя</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" >
         
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" >
         
                     <label class="checkbox-label">
-                        <input type="checkbox" name="subscribe" checked>
+                        <input type="checkbox" name="subscribe" >
                         Получать информацию о скидках и акциях
                     </label>
         
                     <label for="phone">Номер телефона</label>
-                    <input type="tel" id="phone" name="phone" required>
+                    <input type="tel" id="phone" name="phone" >
         
                     <label for="address">Адрес доставки</label>
-                    <input type="text" id="address" name="address" required>
+                    <input type="text" id="address" name="address" >
                     <p class="note">Доставка осуществляется только по Москве</p>
                     
                     <label class="time">Время доставки</label>
                     <div class="radio-group">
                         <label class="radio-label">
-                            <input type="radio" name="delivery-time" value="asap" required> Как можно скорее
+                            <input type="radio" name="delivery-time" value="asap" > Как можно скорее
                         </label>
                         <label class="radio-label">
-                            <input type="radio" name="delivery-time" value="specific" required> К указанному времени
+                            <input type="radio" name="delivery-time" value="specific" > К указанному времени
                         </label>
                     </div>
         
