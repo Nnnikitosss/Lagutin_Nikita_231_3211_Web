@@ -4,242 +4,264 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/styles2.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <title>Собрать ланч</title>
+    <title>Собрать заказ</title>
 </head>
 <body>
+    
     <header>
         <h1>Food Construct</h1>
         <nav>
             <a href="index.html">О нас</a>
-            <a href="index2.html" class="active">Собрать ланч</a>
+            <a href="#" class="active">Собрать ланч</a>
             <a href="#">Заказы</a>
             <a href="#">Контакты</a>
-        </nav>
+         </nav>
     </header>
+
+
     <main>
-        <section id="soup-section">
+        <section class="section1">
             <h2>Выберите суп</h2>
             <div class="filters">
-                <button data-kind="fish">рыбный</button>
-                <button data-kind="meat">мясной</button>
-                <button data-kind="veg">вегетарианский</button>
+                <button data-kind="meat">Мясной</button>
+                <button data-kind="fish">Рыбный</button>
+                <button data-kind="veg">Вегетарианский</button>
             </div>
-            <div class="dishes"></div>
+            <div id="soups" class="soups"></div>
         </section>
-        <section id="main-section">
-            <h2>Выберите главное блюдо</h2>
-            <div class="filters">
-                <button data-kind="fish">рыбное</button>
-                <button data-kind="meat">мясное</button>
-                <button data-kind="veg">вегетарианское</button>
-            </div>
-            <div class="dishes"></div>
-        </section>
-        <section id="salat-section">
+
+        <section class="section2">
             <h2>Выберите салат или стартер</h2>
             <div class="filters">
-                <button data-kind="fish">рыбный</button>
-                <button data-kind="meat">мясной</button>
-                <button data-kind="veg">вегетарианский</button>
+                <button data-kind="meat" >Мясной</button>
+                <button data-kind="fish">Рыбный</button>
+                <button data-kind="veg">Вегетарианский</button>
             </div>
-            <div class="dishes"></div>
+            
+            <div id="starts" class="dishes"></div>
         </section>
-        <section id="drink-section">
-            <h2>Выберите напиток</h2>
+            
+        <section class="section3">
+            <h2>Выберите главное блюдо</h2>
             <div class="filters">
-                <button data-kind="cold">холодный</button>
-                <button data-kind="hot">горячий</button>
+                <button data-kind="meat">Мясной</button>
+                <button data-kind="fish">Рыбный</button>
+                <button data-kind="veg">Вегетарианский</button>
             </div>
-            <div class="dishes"></div>
+            <div id="mains" class="dishes">
+                
+            </div>
         </section>
-        <section id="desert-section">  
+
+        <section  class="section4">
             <h2>Выберите десерт</h2>
             <div class="filters">
-                <button data-kind="small">маленькая порция</button>
-                <button data-kind="medium">средняя порция</button>
-                <button data-kind="big">большая порция</button>
+                <button data-kind="large">Большие</button>
+                <button data-kind="medium">Средние</button>
+                <button data-kind="small">Маленькие</button>
             </div>
-            <div class="dishes"></div>
+            <div id="deserts" class="dishes">
+                
+            </div>
         </section>
-<!-- .................................................................................. -->
 
-        <!-- Новая секция с доступными комбо -->
-        <section id="combo-options">
-            <h2>Доступные для заказа комбо</h2>
-            <div class="combo-grid">
-                <div class="combo-column">
-                    <div class="combo-row">
-                        <div class="combo-item">
-                            <img src="picture/soup.jpg" alt="Суп">
-                            <p>Суп</p>
-                        </div>
-                        <div class="combo-item">
-                            <img src="picture/main.jpg" alt="Главное блюдо">
-                            <p>Главное блюдо</p>
-                        </div>
-                        <div class="combo-item">
-                            <img src="picture/salat.jpg" alt="Салат">
-                            <p>Салат</p>
-                        </div>
-                        <div class="combo-item">
-                            <img src="picture/drink.jpg" alt="Напиток">
-                            <p>Напиток</p>
-                        </div>
-                    </div>
-                    <div class="combo-row">
-                        <div class="combo-item">
-                            <img src="picture/main.jpg" alt="Главное блюдо">
-                            <p>Главное блюдо</p>
-                        </div>
-                        <div class="combo-item">
-                            <img src="picture/salat.jpg" alt="Салат">
-                            <p>Салат</p>
-                        </div>
-                        <div class="combo-item">
-                            <img src="picture/drink.jpg" alt="Напиток">
-                            <p>Напиток</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="combo-column">
-                    <div class="combo-row">
-                        <div class="combo-item">
-                            <img src="picture/soup.jpg" alt="Суп">
-                            <p>Суп</p>
-                        </div>
-                        <div class="combo-item">
-                            <img src="picture/main.jpg" alt="Главное блюдо">
-                            <p>Главное блюдо</p>
-                        </div>
-                        <div class="combo-item">
-                            <img src="picture/drink.jpg" alt="Напиток">
-                            <p>Напиток</p>
-                        </div>
-                    </div>
-                    <div class="combo-row">
-                        <div class="combo-item">
-                            <img src="picture/main.jpg" alt="Главное блюдо">
-                            <p>Главное блюдо</p>
-                        </div>
-                        <div class="combo-item">
-                            <img src="picture/drink.jpg" alt="Напиток">
-                            <p>Напиток</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="combo-column">
-                    <div class="combo-row">
-                        <div class="combo-item">
-                            <img src="picture/soup.jpg" alt="Суп">
-                            <p>Суп</p>
-                        </div>
-                        <div class="combo-item">
-                            <img src="picture/salat.jpg" alt="Салат">
-                            <p>Салат</p>
-                        </div>
-                        <div class="combo-item">
-                            <img src="picture/drink.jpg" alt="Напиток">
-                            <p>Напиток</p>
-                        </div>
-                    </div>
-                    <div class="combo-row">
-                        <div class="combo-item">
-                            <img src="picture/desert.jpg" alt="Десерт">
-                            <p>Десерт</p>
-                            <p class="small-note">(Можно добавить к любому заказу)</p>
-                        </div>
-                    </div>
-                </div>
+        <section class="section5">
+            <h2>Выберите напиток</h2>
+            <div class="filters">
+                <button data-kind="hot">Горячие</button>
+                <button data-kind="cold">Холодные</button>
+               
+            </div>
+            <div id="drinks" class="dishes">
+                
             </div>
         </section>
+
+
+        <h2 id="combo">Доступные для заказа комбо</h2>
+    <div class="lunch-container">
+        <div class="combo">
+            <div class="icon">
+                <img src="picture/soup.jpg" alt="Cуп">
+                <p>Суп</p>
+            </div>
+            <div class="icon">
+                <img src="picture/main.jpg" alt="главное блюдо">
+                <p>Главное блюдо</p>
+            </div>
+            <div class="icon">
+                <img src="picture/salad.jpg" alt="салат">
+                <p>Салат</p>
+            </div>
+            <div class="icon">
+                <img src="picture/drink.jpg" alt="напиток">
+                <p>Напиток</p>
+            </div>
+        </div>
+
+
         
-        
-        
-        
-<!-- ................................................................................... -->
-        <section id="order-form">
-            <h2>Сделать заказ</h2>
-            <form action="https://httpbin.org/post" method="POST">
-                <div class="order-section">
-                    <h3>Ваш заказ</h3>
-                    <div id="no-selection-message" class="order-item">
-                        <p>Ничего не выбрано</p>
-                    </div>
-                    <div class="order-item" id="soup-order" style="display: none;">
-                        <p><strong>Суп</strong></p>
-                        <p id="selected-soup">Не выбран</p>
-                    </div>
-                    <div class="order-item" id="main-order" style="display: none;">
-                        <p><strong>Главное блюдо</strong></p>
-                        <p id="selected-main">Не выбрано</p>
-                    </div>
-                    <div class="order-item" id="salat-order" style="display: none;">
-                        <p><strong>Салат/стартер</strong></p>
-                        <p id="selected-salat">Не выбрано</p>
-                    </div>
-                    <div class="order-item" id="drink-order" style="display: none;">
-                        <p><strong>Напиток</strong></p>
-                        <p id="selected-drink">Не выбран</p>
-                    </div>
-                    <div class="order-item" id="desert-order" style="display: none;"> 
-                        <p><strong>Десерт</strong></p>
-                        <p id="selected-desert">Не выбран</p>
-                    </div>
-                    <div class="order-item" id="total-price-block" style="display: none;">
-                        <p id="total-price">Стоимость заказа<span class="price-value">0₽</span></p>
-                    </div>                    
-                    <label for="comments">Комментарии к заказу</label>
-                    <textarea id="comments" name="comments"></textarea>
-                </div>
-        
-        <!-- Удалил required для того что бы не просил заполнить все поля -->
-                <div class="customer-section">
-                    <h3>Ваши данные</h3>
-                    <label for="name">Имя</label>
-                    <input type="text" id="name" name="name" >
-        
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" >
-        
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="subscribe" >
-                        Получать информацию о скидках и акциях
-                    </label>
-        
-                    <label for="phone">Номер телефона</label>
-                    <input type="tel" id="phone" name="phone" >
-        
-                    <label for="address">Адрес доставки</label>
-                    <input type="text" id="address" name="address" >
-                    <p class="note">Доставка осуществляется только по Москве</p>
-                    
-                    <label class="time">Время доставки</label>
-                    <div class="radio-group">
-                        <label class="radio-label">
-                            <input type="radio" name="delivery-time" value="asap" > Как можно скорее
-                        </label>
-                        <label class="radio-label">
-                            <input type="radio" name="delivery-time" value="specific" > К указанному времени
-                        </label>
-                    </div>
-        
-                    <label for="delivery-time-specific">Укажите время доставки</label>
-                    <input type="time" id="delivery-time-specific" name="delivery-time-specific" min="07:00" max="23:00" step="300">
-                    <p class="note">Доступное время доставки с 7:00 до 23:00</p>
-        
-                    <div class="button-group">
-                        <button type="reset">Сбросить</button>
-                        <button type="submit">Отправить</button>
-                    </div>
-                </div>
-            </form>
-        </section>
+        <div class="combo">
+            <div class="icon">
+                <img src="picture/soup.jpg" alt="Cуп">
+                <p>Суп</p>
+            </div>
+            <div class="icon">
+                <img src="picture/main.jpg" alt="главное блюдо">
+                <p>Главное блюдо</p>
+            </div>
+            <div class="icon">
+                <img src="picture/drink.jpg" alt="напиток">
+                <p>Напиток</p>
+            </div>
+        </div>
+
+        <div class="combo">
+            <div class="icon">
+                <img src="picture/soup.jpg" alt="Суп">
+                <p>Суп</p>
+            </div>
+            <div class="icon">
+                <img src="picture/salad.jpg" alt="Салат">
+                <p>Салат</p>
+            </div>
+            <div class="icon">
+                <img src="picture/drink.jpg" alt="Напиток">
+                <p>Напиток</p>
+            </div>
+        </div>
+
+
+        <div class="combo">
+            <div class="icon">
+                <img src="picture/main.jpg" alt="Главное блюдо">
+                <p>Главное блюдо</p>
+            </div>
+            <div class="icon">
+                <img src="picture/salad.jpg" alt="Салат">
+                <p>Салат</p>
+            </div>
+            <div class="icon">
+                <img src="picture/drink.jpg" alt="Напиток">
+                <p>Напиток</p>
+            </div>
+        </div>
+        <div class="combo">
+            <div class="icon">
+                <img src="picture/main.jpg" alt="Главное блюдо">
+                <p>Главное блюдо</p>
+            </div>
+            <div class="icon">
+                <img src="picture/drink.jpg" alt="Напиток">
+                <p>Напиток</p>
+            </div>
+        </div>
+        <div class="combo">
+            <div class="icon">
+                <img src="picture/dessert.jpg" alt="Десерт">
+                <p>Десерт</p>
+                <p>(Можно добавить к любому заказу)</p>
+            </div>
+        </div>
+    </div>
+  
     </main>
-    <footer>
-        <p>Позвонить нам: <a href="tel:+70000000000">+7-000-000-00-00</a></p>
+
+    <form  action="https://httpbin.org/post" method="post" class="bottom" id="forma">
+        <h2>Сделать заказ</h2>
+        <div class="order">
+            <h3>Ваш заказ</h3>
+
+            <div id="no-selection-message" class="order-item">
+                <p>Ничего не выбрано</p>
+            </div>
+            <div class="order-item" id="soup-order" style="display: none;">
+                <p><strong>Суп</strong></p>
+                <p id="selected-soup">Не выбран</p>
+            </div>
+            <div class="order-item" id="start-order" style="display: none;">
+                <p><strong>Стартер</strong></p>
+                <p id="selected-start">Не выбран</p>
+            </div>
+            <div class="order-item" id="main-order" style="display: none;">
+                <p><strong>Главное блюдо</strong></p>
+                <p id="selected-main-dish">Не выбрано</p>
+            </div>
+            <div class="order-item" id="desert-order" style="display: none;">
+                <p><strong>Десерт</strong></p>
+                <p id="selected-desert">Не выбрано</p>
+            </div>
+            <div class="order-item" id="drink-order" style="display: none;">
+                <p><strong>Напиток</strong></p>
+                <p id="selected-drink">Не выбран</p>
+            </div>
+            <div class="order-item" id="total-price-block" style="display: none;">
+                <p id="total-price">Стоимость заказа: <span class="price-value">0₽</span></p>
+            </div>             
+
+            <label id="coment" for="rew">Комментарий к заказу</label>
+            <textarea name="review" id="rew"></textarea>
+
+
+        </div>
+
+        
+
+        <div class="data">
+            <h3>Ваши данные</h3>
+            <label for="name">Имя</label>
+            <input name="name" type="text">
+
+            <label for="mail">E-mail</label>
+            <input name="email" type="mail">
+
+            <label class="check-label"> <input name="check" type="checkbox"> 
+                Получать информацию 
+                о скидках и акциях</label>
+            
+            <label for="num">Номер телефона</label>
+            <input name="tele" type="tel">
+
+            
+            <label for="location">Адрес доставки</label>
+            <input name="location" type="text" >
+            <p class="note">Доставка осуществляется только по Москве</p>
+
+            <label>Время доставки</label>
+            <label><input name="but" type="radio" >
+                Как можно скорее</label>
+
+            <label><input name="but" type="radio">
+                К назначенному времени</label>
+
+            <label for="time">Укажите время доставки</label>
+            <input name="tim" type="time" min="07:00" max="23:00" step="300" >
+            <p class="note" id="Messagebox">Доступное время доставки с 7:00 до 23:00</p>
+            
+
+            <div class="buttons">
+                <button class="but" type="reset">
+                    <span>Сбросить</span>
+                </button>
+
+                <button class="but" id="ok-button" type="submit">  
+                    <span>Отправить</span>
+                </button>
+            </div>
+
+        </div>
+
+
+    </form>
+    
+
+    <footer id="foot">
+
+        <p>Позвонить нам <a class="calllink" href="#">+7-000-000-00-00</a></p>
     </footer>
-    <script src="Java/dishes.js"></script>
+
+
     <script src="Java/displayDishes.js"></script>
 </body>
 </html>
+

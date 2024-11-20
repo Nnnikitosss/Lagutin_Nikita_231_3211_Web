@@ -1,4 +1,18 @@
 
+ header {
+    background-color: white;
+    color: #333;
+    padding: 10px 20px; 
+    text-align: left;
+}
+
+section >div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -7,62 +21,14 @@ body {
     overflow-x: hidden;
 }
 
-header {
-    background-color: white;
-    color: #333;
-    padding: 10px 20px;
-    text-align: left;
-}
-
-h1 {
-    margin-top: 0; 
-}
-
-/* Шапка*/
-nav a {
-    color: #333; 
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-    line-height: 1.5; 
-}
-
-nav a:hover {
-    color: orange; 
-}
-
-a.active {
-    color: tomato;
-}
-
-main {
-    padding: 10px 20px; 
-    margin-top: 0; 
-}
-
-h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-
-/* Блок отвечающий за карточки продуктов */
-.dish {
+section  > div >  div.dish {
     display: flex;
     flex-direction: column;
-    background-color: white;
-    padding: 20px 30px;
-    border-radius: 25px;
-    filter: drop-shadow(12px 14px 18px rgba(0, 0, 0, 0.12));
+    padding: 30px 40px;
+    border-radius: 35px;
     cursor: pointer;
-    text-align: left;
-    width: 400px; 
-    margin: 10px;
-}
-
-.dish img {
-    max-width: 95%; 
-    border-radius: 25px; 
+    background-color: white;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
 }
 
 .dish-info {
@@ -87,110 +53,211 @@ h2 {
     margin-top: 5px;
 }
 
-.dish button {
-    background-color: transparent;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 10px;
-    margin-top: 5px;
-    cursor: pointer;
+h1 {
+    margin-top: 0px;
+}
+
+    
+section > div> div:hover {
+    border: 2px solid tomato;
+}
+
+section > div.filters:hover {
     border: none;
-    width: 100%;
-    font-size: 16px;
 }
-
-.dish:hover {
-    border: 2px solid tomato; 
-}
-
-.dish:hover button {
+    
+section > div > div:hover button {
     background-color: tomato;
-    color: white;
 }
 
-.dishes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; 
-    justify-items: center; 
+section > div>  div > img{
+    width: 100%;
+    border-radius: 35px;
+}
+
+section>div>div>p{
+    size: 20px;
+}
+
+section>div>div>p.gram{
+    color: grey;
+
+}
+
+button.add {
+    width: 100%;
+    background-color: white;
+    border: 0.5px white;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px 30px;
+    cursor: pointer;
+
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    justify-content: flex-start;
+    align-items: center;  
+    }
+
+    
+nav>a {
+    font-size: 20px;
+    color: #333; 
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 1.5; 
+}
+    
+nav a:first-child {
+    margin-left: 0; 
+}
+    
+nav a:hover {
+    color: orange; 
+}
+
+a.active {
+    color: tomato;
+}
+    
+   
+
+@media (max-width: 1500px){
+
+    div.order {
+        float: left;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        
+    }
+
+    div.data {
+    
+        float: right;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        
+    }
+}
+
+@media (max-width: 800px) {
+    section>div{
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    
+    
+
+}
+
+@media (max-width: 600px) {
+    section>h2{
+        text-align: center;
+            
+    }
+
+      
+}
+
+@media (max-width: 480px) {
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        }
+        
+        
+    nav>a {
+        font-size: 20px;
+        font-family: Arial bold;
+        color: #333; 
+        text-decoration: none;
+        font-weight: bold;
+        line-height: 1.5; 
+    }
+
+    form{
+        z-index: 98;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.order {
+        margin-top: 30px;
+        width: 90%
+        
+    }
+
+    div.data {
+        margin-top: 30px;
+        width: 90%;
+        
+    }
+    
+    nav.main-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
 }
 
 
-/* Конец блока карточек */
+main {
+    margin:20px;
+}
+
+
 
 footer {
     background-color: black;
-    color: white;
-    text-align: left;
-    padding: 30px;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    right: 0;
+    margin: 0px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-footer a {
+footer>p{
+    color: white;
+}
+
+footer>a {
     color: white;
     text-decoration: none;
 }
 
-footer a:hover {
-    color: tomato;
+a:hover {
+    color: orange;
+}
+
+a.calllink {
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 20px;
+    color: white;
+}
+
+a.calllink:hover {
+    color: orange;
 }
 
 
-.placeholder {
-    color: gray;
-    pointer-events: none;
-}
-
-#order-form {
-    padding: 20px;
-    background-color: white;
-    margin: 20px auto;
-    max-width: 800px;
-    text-align: center;
-}
-
-#order-form .order-item {
-    text-align: left;
-}
-
-#order-form h2 {
-    margin-top: 0;
-}
-
-#order-form form {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-#order-form form div:not(.radio-group) {
-    width: 45%; 
-}
-
-#order-form h3 {
-    text-align: left;
-}
-
-#order-form label {
-    display: block;
-    text-align: left;
-}
-
-#order-form select,
-#order-form input:not([type="checkbox"]):not([type="radio"]),
-#order-form textarea {
-    width: 100%;
-    padding: 10px;
+div.order>select {
+    height: 30px;
+    margin-top: 5px;
     margin-bottom: 10px;
-    border: 1px solid black;
-    border-radius: 0;
-    box-sizing: border-box;
 }
 
-#order-form textarea {
+div.order>textarea {
     max-width: 100%; 
     min-width: 100%; 
     max-height: 300px;
@@ -199,8 +266,37 @@ footer a:hover {
 }
 
 
+section>h2 {
+    font-size: 25px;
+}
 
-#order-form button {
+
+
+section{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+div.data>input{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 30px;
+}
+
+div>label.check-label {
+    margin-bottom: 20px;
+}
+
+div>label{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#coment{
+    margin-top: 15px;
+}
+
+button.but{
     background-color: white;
     color: black;
     border: 1px solid black;
@@ -210,79 +306,58 @@ footer a:hover {
     margin-top: 10px;
 }
 
-#order-form button[type="reset"] {
-    margin-right: 10px;
+
+
+#combo {
+    text-align: center;  
 }
 
-.note {
-    font-size: 12px;
+
+form.bottom {
+    overflow: hidden;
+    padding: 20px;
+    background-color: white;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+
+
+form>h2 {
+    text-align: center;
+}
+
+
+form>div>h3 {
+    text-align: left;
+}
+
+
+form>div>p {
     color: gray;
-    text-align: left;
-    margin: 0;
-    margin-bottom: 20px; 
-    font-style: italic; 
+    font-size: 15px;
+    margin-top: -5px;
 }
 
-.checkbox-label,
-.radio-label {
-    display: flex; 
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 10px;
+.buttons{
+    height: 40px;
+    padding: 2px;
+    margin-bottom: 2px;
 }
 
-.checkbox-label input,
-.radio-label input {
-    margin-right: 10px;
-}
-
-.radio-group {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%; 
-}
-
-.button-group {
-    display: flex;
-    justify-content: flex-start; 
-    width: 100%;
-}
-
-.checkbox-label {
-    margin-bottom: 20px; 
-}
-
-
-.time {
-    margin-bottom: 10px;
-}
-
-
-#total-price {
-    font-weight: bold;
-    margin-top: 20px;
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-#total-price .price-value {
-    font-size: 20px; 
-    display: inline-block;
-
-}
 
 .order-item p {
     margin: 0; 
     line-height: 1.2; 
+    font-size: 20px;
+    text-align: left;
 }
 
 .order-item p + p {
     margin-bottom: 20px; 
     width: 300px;
 }
-
-
 
 
 #no-selection-message {
@@ -300,110 +375,69 @@ footer a:hover {
 }
 
 
-/* Стили кнопок фильтрации */
+
+.price-value {
+    font-size: 25px;
+}
+
+
+
+
+.filters{
+    margin-bottom: 20px;
+    width: 40%;
+}
+
+
 .filters button {
-    margin-right: 10px;
-    padding: 5px 10px;
+    margin-right: 20px;      
+    padding: 5px 10px;     
     cursor: pointer;
-    font-size: 14px;
+    font-size: 14px;        
     color: green; 
     background: none;
     border: none; 
-    border-radius: 5px; 
+    border-radius: 4px;    
     transition: background-color 0.3s; 
 }
-/* Раскодировать для того чтобы появлялась обводка при наведении на кнопку */
-/* .filters button:hover {
-    border: 2px solid green;  
-} */
+
 
 .filters button.active {
-    background-color: #d2eedc; 
+    background-color: #9dda9b; 
     color: green; 
     border-radius: 10px; 
 }
-/* Конец кнопок фильтрации */
 
 
+div.lunch-container{
+    padding: 5px;
+    margin: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Стили для блока с комбо */
-#combo-options {
-    margin: 20px auto;
-    max-width: 1200px; 
+div.combo{
     text-align: center;
-}
-
-#combo-options h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.combo-grid {
     display: flex;
-    justify-content: space-between;
-    gap: 40px;
-}
-
-.combo-column {
-    display: flex;
-    flex-direction: column;
-    gap: 40px; 
-    align-items: center; 
-}
-
-.combo-row {
-    display: flex;
+    flex-direction: row;
     gap: 20px;
     justify-content: center;
+    
 }
 
-.combo-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    transition: transform 0.3s;
-    background-color: transparent; 
-    border: none; 
-}
 
-.combo-item img {
-    width: 50px;  
+div.icon>img{
+    width: 50px;
     height: 50px;
-    transition: transform 0.3s, scale 0.3s;
+    margin-bottom: -5px;
 }
 
-.combo-item img:hover {
-    transform: scale(1.1);
+div.icon>img:hover {
+    transform: translateY(-5px) scale(1.2);
 }
 
-.combo-item p {
-    margin: 5px 0 0 0; 
-}
-
-.small-note {
-    font-size: 12px;
-    color: gray;
-    text-align: center;
-    margin-top: 10px;
-}
-
-/* Стили для уведомлений */
-.alert {
+div.alert {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -418,11 +452,12 @@ footer a:hover {
     max-width: 400px; 
 }
 
-.alert p {
-    margin-bottom: 20px;
-}
 
-.alert button {
+div.alert > button:hover{
+    background-color: tomato;
+
+}
+div.alert > button{
     background-color: white; 
     color: black;
     padding: 10px 20px;
@@ -431,9 +466,7 @@ footer a:hover {
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
-
-.alert button:hover {
-    background-color: tomato; 
-    color: white; 
+div.alert > p{
+    font-size: 20px;
 }
 
