@@ -426,7 +426,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     updateNothingSelectedMessage();
 
-                    fetch('https://edu.std-900.ist.mospolytech.ru/labs/api/orders?api_key=d4f78d77-dc9e-488f-a090-8d40695dcec8', {
+                    fetch('https://edu.std-900.ist.mospolytech.ru/labs/api/orders?api_key=ea191b65-ab69-4c0e-824f-4f3156c177b1', {
                         method: 'POST',
                         body: formData
                     })
